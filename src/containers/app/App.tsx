@@ -1,21 +1,12 @@
 import React from 'react';
-import { createMuiTheme, Grid, MuiThemeProvider, Paper } from '@material-ui/core';
+import { Grid, MuiThemeProvider, Paper } from '@material-ui/core';
 import Dashboard from '../../components/dashboard/Dashboard';
 import Chart from '../../components/dashboard/Chart';
 import Orders from '../../components/dashboard/Orders';
 import Deposits from '../../components/dashboard/Deposits';
+import themeMui from '../../themes/theme-mui';
 
 function App() {
-    const themeMui = createMuiTheme({
-        palette: {
-            primary: {
-                light: '#6ec6ff',
-                main: '#2196f3',
-                dark: '#0069c0',
-                contrastText: '#ffffff',
-            },
-        },
-    });
     return (
         <MuiThemeProvider theme={themeMui}>
             <Dashboard>
