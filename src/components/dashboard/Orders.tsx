@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
+import { Paper, TableContainer } from '@material-ui/core';
 
 // Generate Order Data
 function createData(id: number, date: string, name: string, shipTo: string, paymentMethod: string, amount: number) {
@@ -28,28 +29,31 @@ export default function Orders() {
     return (
         <React.Fragment>
             <Title>Recent Orders</Title>
-            <Table size='small'>
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Date</TableCell>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Ship To</TableCell>
-                        <TableCell>Payment Method</TableCell>
-                        <TableCell align='right'>Sale Amount</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.id}>
-                            <TableCell>{row.date}</TableCell>
-                            <TableCell>{row.name}</TableCell>
-                            <TableCell>{row.shipTo}</TableCell>
-                            <TableCell>{row.paymentMethod}</TableCell>
-                            <TableCell align='right'>{`$${row.amount}`}</TableCell>
+            <TableContainer component={Paper}>
+                <Table size='small'>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Date</TableCell>
+                            <TableCell>Name</TableCell>
+                            <TableCell>Ship To</TableCell>
+                            <TableCell>Payment Method</TableCell>
+                            <TableCell align='right'>Sale Amount</TableCell>
                         </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+                    </TableHead>
+                    <TableBody>
+                        {rows.map((row) => (
+                            <TableRow key={row.id}>
+                                <TableCell>{row.date}</TableCell>
+                                <TableCell>{row.name}</TableCell>
+                                <TableCell>{row.shipTo}</TableCell>
+                                <TableCell>{row.paymentMethod}</TableCell>
+                                <TableCell align='right'>{`$${row.amount}`}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+
             <Link color='primary' href='#' onClick={preventDefault} style={{ marginTop: 3 }}>
                 See more orders
             </Link>
