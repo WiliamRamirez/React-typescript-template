@@ -9,9 +9,9 @@ function App() {
     const themeMui = createMuiTheme({
         palette: {
             primary: {
-                light: '#8e8e8e',
-                main: '#616161',
-                dark: '#373737',
+                light: '#6ec6ff',
+                main: '#2196f3',
+                dark: '#0069c0',
                 contrastText: '#ffffff',
             },
         },
