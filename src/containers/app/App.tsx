@@ -1,6 +1,6 @@
 import React from 'react';
 import { MuiThemeProvider } from '@material-ui/core';
-import Dashboard from '../../components/dashboard/Dashboard';
+import Dashboard from '../../components/dashboard/dashboard';
 
 import themeMui from '../../themes/theme-mui';
 import BodyCustomized from '../../components/body-customized/body-customized';

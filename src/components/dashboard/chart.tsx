@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTheme } from '@material-ui/core/styles';
-import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
-import Title from './Title';
+/*import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';*/
+import Title from './title';
 
 // Generate Sales Data
 function createData(time: string, amount?: number) {
@@ -26,7 +26,7 @@ export default function Chart() {
     return (
         <React.Fragment>
             <Title>Today</Title>
-            <ResponsiveContainer>
+            {/*<ResponsiveContainer>
                 <LineChart
                     data={data}
                     margin={{
@@ -58,7 +58,7 @@ export default function Chart() {
                         dot={false}
                     />
                 </LineChart>
-            </ResponsiveContainer>
+            </ResponsiveContainer>*/}
         </React.Fragment>
     );
 }

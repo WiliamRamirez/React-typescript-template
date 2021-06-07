@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, Divider, Grid, Paper, Typography } from '@material-ui/core';
-import Chart from '../dashboard/Chart';
-import Deposits from '../dashboard/Deposits';
-import Orders from '../dashboard/Orders';
+import Chart from '../dashboard/chart';
+import Deposits from '../dashboard/deposits';
+import Orders from '../dashboard/orders';
 
 function BodyCustomized() {
     return (
