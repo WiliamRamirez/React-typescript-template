@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Divider, Grid, Paper, Typography } from '@material-ui/core';
-import Chart from '../dashboard/chart';
-import Deposits from '../dashboard/deposits';
-import Orders from '../dashboard/orders';
+import { Divider, Grid, Paper, Typography } from '@material-ui/core';
+import CustomizeMainForm from '../form/customize-main-form';
+import Review from '../form/review';
 
 function BodyCustomized() {
     return (
@@ -52,7 +51,11 @@ function BodyCustomized() {
                         flexDirection: 'column',
                     }}
                 >
-                    <Typography>Cuerpo del Componente</Typography>
+                    <CustomizeMainForm title={'Titulo del Formulario'}>
+                        {/*<AddressForm />*/}
+                        {/*<PaymentForm />*/}
+                        <Review />
+                    </CustomizeMainForm>
                 </Paper>
             </Grid>
         </React.Fragment>
