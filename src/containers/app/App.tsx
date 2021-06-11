@@ -3,7 +3,7 @@ import { MuiThemeProvider } from '@material-ui/core';
 import Dashboard from '../../components/dashboard/dashboard';
 
 import themeMui from '../../themes/theme-mui';
-import BodyCustomized from '../../components/body-customized/body-customized';
+import BodyCustomized from '../../components/body-custom/body-customized';
 
 function App() {
     return (

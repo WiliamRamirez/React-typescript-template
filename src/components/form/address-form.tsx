@@ -1,95 +1,37 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import useStyles from '../profile-section/styles/use-styles';
 import { Button } from '@material-ui/core';
+import CustomTextField from '../custom-text-field/custom-text-field';
 
 export default function AddressForm() {
-    const classes = useStyles();
     return (
         <React.Fragment>
             <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                    <TextField
-                        required
-                        id='firstName'
-                        name='firstName'
-                        label='First name'
-                        fullWidth
-                        autoComplete='given-name'
-                        variant='standard'
-                    />
+                    <CustomTextField name='firstName' label='First name' />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <TextField
-                        required
-                        id='lastName'
-                        name='lastName'
-                        label='Last name'
-                        fullWidth
-                        autoComplete='family-name'
-                        variant='standard'
-                    />
+                    <CustomTextField name='lastName' label='Last name' />
                 </Grid>
                 <Grid item xs={12}>
-                    <TextField
-                        required
-                        id='address1'
-                        name='address1'
-                        label='Address line 1'
-                        fullWidth
-                        autoComplete='shipping address-line1'
-                        variant='standard'
-                    />
+                    <CustomTextField required name='address1' label='Address line 1' />
                 </Grid>
                 <Grid item xs={12}>
-                    <TextField
-                        id='address2'
-                        name='address2'
-                        label='Address line 2'
-                        fullWidth
-                        autoComplete='shipping address-line2'
-                        variant='standard'
-                    />
+                    <CustomTextField name='address2' label='Address line 2' />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <TextField
-                        required
-                        id='city'
-                        name='city'
-                        label='City'
-                        fullWidth
-                        autoComplete='shipping address-level2'
-                        variant='standard'
-                    />
+                    <CustomTextField required name='city' label='City' />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <TextField id='state' name='state' label='State/Province/Region' fullWidth variant='standard' />
+                    <CustomTextField name='state' label='State/Province/Region' />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <TextField
-                        required
-                        id='zip'
-                        name='zip'
-                        label='Zip / Postal code'
-                        fullWidth
-                        autoComplete='shipping postal-code'
-                        variant='standard'
-                    />
+                    <CustomTextField required name='zip' label='Zip / Postal code' />
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <TextField
-                        required
-                        id='country'
-                        name='country'
-                        label='Country'
-                        fullWidth
-                        autoComplete='shipping country'
-                        variant='standard'
-                    />
+                    <CustomTextField required name='country' label='Country' />
                 </Grid>
                 <Grid item xs={12}>
                     <FormControlLabel

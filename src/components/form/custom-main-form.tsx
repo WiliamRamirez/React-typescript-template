@@ -6,7 +6,7 @@ interface Props {
     title: string;
 }
 
-function CustomizeMainForm({ title, children }: Props) {
+function CustomMainForm({ title, children }: Props) {
     return (
         <Container maxWidth='md'>
             <Typography component='h1' variant='h4' align='center'>
@@ -19,4 +19,4 @@ function CustomizeMainForm({ title, children }: Props) {
     );
 }
 
-export default CustomizeMainForm;
+export default CustomMainForm;
